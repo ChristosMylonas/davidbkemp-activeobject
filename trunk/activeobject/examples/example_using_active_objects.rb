@@ -10,7 +10,7 @@ class DomainNameReseller
     com_result = @com.buy_domain_name(domain_name)
     com_au_result = @com_au.buy_domain_name(domain_name)
     co_nz_result = @co_nz.buy_domain_name(domain_name)
-    puts client_name + ": " + com_result.to_s + ", " + com_au_result.to_s + ", " + co_nz_result.to_s
+    puts "client_name #{com_result}, #{com_au_result}, #{co_nz_result}"
   end
 end
 
