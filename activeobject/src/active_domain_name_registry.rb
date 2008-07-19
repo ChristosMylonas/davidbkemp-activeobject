@@ -59,7 +59,7 @@ class Scheduler
       end
      }
   end
-  def enqueue(item)
+  def enqueue(&item)
     @activation_queue.enqueue(item)
   end
 end
@@ -71,10 +71,10 @@ class DomainNameRegistryProxy
   end
   def buy_domain_name(domain_name)
     result = FutureResult.new
-    @scheduler.enqueue lambda {
+    @scheduler.enqueue {
       result.value = @domain_name_registiry.buy_domain_name(domain_name)
-     }
-     return result
+    }
+    return result
   end
 end
 
