@@ -9,13 +9,13 @@ class FutureResult
         @condition.broadcast;
       }    
     end
-    def method_missing(method_name, *args)
-      wait_for_result
-      @result.send(method_name, *args)
-    end
     def to_s
       wait_for_result
       return @result.to_s
+    end
+    def method_missing(method_name, *args)
+      wait_for_result
+      @result.send(method_name, *args)
     end
     
   private
