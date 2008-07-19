@@ -39,8 +39,8 @@ end
 # individual methods for success, message, etc.  Still need to define to_s and any other
 # methods defined on Object itself.
 # 
-#    def method_missing(methodName, *args)
+#    def method_missing(method_name, *args)
 #      wait_for_result
-#      @result.method(methodName).call(*args)
+#      @result.send(method_name, *args)
 #    end
 

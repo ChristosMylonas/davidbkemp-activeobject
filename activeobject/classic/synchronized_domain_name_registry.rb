@@ -1,4 +1,4 @@
-require "src/domain_name_registry"
+require "classic/domain_name_registry"
 
 class SynchronizedDomainNameRegistry
   def initialize(domain_space)

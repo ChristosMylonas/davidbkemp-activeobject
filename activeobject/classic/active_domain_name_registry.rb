@@ -1,6 +1,6 @@
-require "src/domain_name_registry"
-require "src/scheduler"
-require "src/future_result"
+require "classic/domain_name_registry"
+require "classic/scheduler"
+require "classic/future_result"
 
 # Note: this could be generalized using method_missing()
 # It could be made more general by having its dependencies injected.

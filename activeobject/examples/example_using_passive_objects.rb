@@ -1,4 +1,4 @@
-require "src/synchronized_domain_name_registry"
+require "classic/synchronized_domain_name_registry"
 
 class DomainNameReseller
   def initialize
@@ -16,7 +16,7 @@ end
 
 
 domain_name_reseller = DomainNameReseller.new
-client1 = Thread.new {domain_name_reseller.buy_across_all_spaces("A", "foo")}
-client2 = Thread.new {domain_name_reseller.buy_across_all_spaces("B", "foo")}
-client1.join
-client2.join
+thread1 = Thread.new {domain_name_reseller.buy_across_all_spaces("A", "foo")}
+thread2 = Thread.new {domain_name_reseller.buy_across_all_spaces("B", "foo")}
+thread1.join
+thread2.join
