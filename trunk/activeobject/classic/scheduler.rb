@@ -1,4 +1,4 @@
-require "src/activation_queue"
+require "classic/activation_queue"
 
 class Scheduler
   def initialize
@@ -15,6 +15,6 @@ class Scheduler
 end
 
 # Could be made more general by having the activiation queue injected into it.
-# Could be made more flexible by having the target "servent" object injected and passing
-# the servent as a parameter to invocation of "call".  This would allow multiple servents
+# Could be made more flexible by having the target "servant" object injected and passing
+# the servant as a parameter to invocation of "call".  This would allow multiple servants
 # per activation queue (e.g. a domain name registry allowing more than one but still limited number of connections.)
