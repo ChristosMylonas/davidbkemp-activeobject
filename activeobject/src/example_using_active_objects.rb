@@ -1,10 +1,10 @@
-require "src/domain_name_registry_proxy"
+require "src/active_domain_name_registry"
 
 class DomainNameReseller
   def initialize
-    @com = DomainNameRegistryProxy.new("com")
-    @com_au = DomainNameRegistryProxy.new("com.au")
-    @co_nz = DomainNameRegistryProxy.new("co.nz")
+    @com = ActiveDomainNameRegistry.new("com")
+    @com_au = ActiveDomainNameRegistry.new("com.au")
+    @co_nz = ActiveDomainNameRegistry.new("co.nz")
   end
   def buy_across_all_spaces(client_name, domain_name)
     com_result = @com.buy_domain_name(domain_name)
