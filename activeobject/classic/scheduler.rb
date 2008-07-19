@@ -9,8 +9,8 @@ class Scheduler
       end
      }
   end
-  def enqueue(&item)
-    @activation_queue.enqueue(item)
+  def enqueue(&block)
+    @activation_queue.enqueue(block)
   end
 end
 
