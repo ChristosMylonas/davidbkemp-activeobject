@@ -2,7 +2,6 @@
 #Classes, objects, and variables
 #===================================================
 class Adder
-  @@grand_total = 0
   
   def initialize(addend)
     @addend = addend
@@ -12,16 +11,11 @@ class Adder
   def add(value)
     result = value + @addend
     @total += result
-    @@grand_total += result
     return result
   end
   
   def total
     return @total
-  end
-  
-  def Adder.grand_total
-    return @@grand_total
   end
 end
 
@@ -36,7 +30,6 @@ puts "7 + 100: #{z}"
 
 puts "total for a: #{a.total}"
 puts "total for b: #{b.total}"
-puts "Grand total: #{Adder.grand_total}"
 
 #=========================================================
 # Blocks/Closures
@@ -127,3 +120,22 @@ puts "Grand total: #{Adder.grand_total}"
 #t1.join
 #t2.join
 
+#================================================
+# Arrays
+#================================================
+#a = []
+#a << 'apple'
+#a << 'banana'
+#a << 'orange'
+#puts a.length
+#puts a.empty?
+#puts a[0]
+#puts a[1]
+#puts a[2]
+#puts a.include?('apple')
+#puts a.include?('melon')
+#puts a.shift
+#puts a.shift
+#puts a.shift
+#puts a.length
+#puts a.empty?
