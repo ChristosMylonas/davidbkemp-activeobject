@@ -2,6 +2,7 @@ require "src/domain_name_registry"
 require "src/scheduler"
 require "src/future_result"
 
+# Note: this could be generalized using method_missing()
 class ActiveDomainNameRegistry
   def initialize(domain_space)
     @domain_name_registiry = DomainNameRegistry.new(domain_space)

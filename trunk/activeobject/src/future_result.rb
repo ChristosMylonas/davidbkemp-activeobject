@@ -3,6 +3,14 @@ class FutureResult
       @mutex = Mutex.new
       @condition = ConditionVariable.new
     end
+
+    def value=(result)
+      @mutex.synchronize {
+        @result = result;
+        @condition.broadcast;
+      }    
+    end
+
     def success
       wait_for_result
       return @result.success
@@ -15,13 +23,8 @@ class FutureResult
       wait_for_result
       return @result.to_s
     end
-    def value=(result)
-      @mutex.synchronize {
-        @result = result;
-        @condition.broadcast;
-      }    
-    end
-  
+
+    
   private
     def wait_for_result
       @mutex.synchronize {
@@ -30,5 +33,14 @@ class FutureResult
         end
       }
     end
-
 end
+
+# Can be generalized by using the following instead of defining
+# individual methods for success, message, etc.  Still need to define to_s and any other
+# methods defined on Object itself.
+# 
+#    def method_missing(methodName, *args)
+#      wait_for_result
+#      @result.method(methodName).call(*args)
+#    end
+
