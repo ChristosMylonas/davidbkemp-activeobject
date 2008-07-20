@@ -1,5 +1,7 @@
+require "variation/synchronized_object"
+
 class DomainNameRegistry
-  @@global_registry = []
+  @@global_registry = SynchronizedObject.new(Array.new)
   def initialize(domain_space)
     @domain_space = domain_space
   end
