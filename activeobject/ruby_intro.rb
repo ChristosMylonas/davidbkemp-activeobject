@@ -35,23 +35,23 @@ puts "total for b: #{b.total}"
 # Blocks/Closures
 #=========================================================
 #class Foo
-#  def a(x, &block)
+#  def a(x, block)
 #    return x + block.call(42)
 #  end
-#  
-#  def b(x)
+#
+#  def c(x)
 #    return x + yield(42)
 #  end
 #  
-#  def c(x, block)
+#  def b(x, &block)
 #    return x + block.call(42)
-#  end
+#  end  
 #end
 #
 #f = Foo.new
-#puts f.a(100) {|v| v + 5}
+#puts f.a(100, lambda{|v| v + 5})
 #puts f.b(100) {|v| v + 5}
-#puts f.c(100, lambda{|v| v + 5})
+#puts f.c(100) {|v| v + 5}
 
 #===================================
 # Threads
