@@ -19,8 +19,12 @@ end
 
 domain_name_reseller = DomainNameReseller.new
 start = Time.now
-thread1 = Thread.new {domain_name_reseller.buy_across_all_spaces("A", "foo")}
-thread2 = Thread.new {domain_name_reseller.buy_across_all_spaces("B", "foo")}
+thread1 = Thread.new {
+  domain_name_reseller.buy_across_all_spaces("A", "foo")
+}
+thread2 = Thread.new {
+  domain_name_reseller.buy_across_all_spaces("B", "foo")
+}
 thread1.join
 thread2.join
 puts Time.now - start
