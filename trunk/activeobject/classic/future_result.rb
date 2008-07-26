@@ -11,6 +11,10 @@ class FutureResult
       }    
     end
 
+    def full_domain_name
+      wait_for_result
+      return @result.full_domain_name
+    end
     def success
       wait_for_result
       return @result.success
