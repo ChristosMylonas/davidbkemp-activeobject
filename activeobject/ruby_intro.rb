@@ -39,13 +39,13 @@ puts "total for b: #{b.total}"
 #    return x + block.call(42)
 #  end
 #
-#  def c(x)
-#    return x + yield(42)
-#  end
-#  
 #  def b(x, &block)
 #    return x + block.call(42)
 #  end  
+#  
+#  def c(x)
+#    return x + yield(42)
+#  end
 #end
 #
 #f = Foo.new
