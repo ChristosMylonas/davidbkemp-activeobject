@@ -23,7 +23,7 @@ thread1 = Thread.new {
   domain_name_reseller.buy_across_all_spaces("A", "foo")
 }
 thread2 = Thread.new {
-  domain_name_reseller.buy_across_all_spaces("B", "foo")
+  domain_name_reseller.buy_across_all_spaces("B", "bar")
 }
 thread1.join
 thread2.join
