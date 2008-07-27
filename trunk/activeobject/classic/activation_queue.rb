@@ -7,7 +7,7 @@ class ActivationQueue
   def enqueue(item)
     @mutex.synchronize {
       @items << item
-      @condition.signal
+      @condition.broadcast
     }
   end
   def dequeue

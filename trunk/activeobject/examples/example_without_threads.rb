@@ -14,6 +14,5 @@ class DomainNameReseller
   end
 end
 
-
 domain_name_reseller = DomainNameReseller.new
 domain_name_reseller.buy_across_all_spaces("foo")
