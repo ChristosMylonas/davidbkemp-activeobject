@@ -31,13 +31,13 @@ public class FuturePurchaseResult implements PurchaseResult {
 		return result.toString();
 	}
 
-	private void waitForResult() {
+	private synchronized void waitForResult() {
 		while(result == null) {
 			waitForNotification();
 		}
 	}
 
-	private synchronized void waitForNotification() {
+	private void waitForNotification() {
 		try {
 			wait();
 		} catch (InterruptedException e) {
