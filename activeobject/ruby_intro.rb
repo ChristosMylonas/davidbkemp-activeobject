@@ -98,11 +98,11 @@ puts "total for b: #{b.total}"
 # Condition variables
 #================================================
 #m = Mutex.new
-#c1 = ConditionVariable.new
+#c = ConditionVariable.new
 #t1 = Thread.new {
 #  m.synchronize {
 #    puts 'a'
-#    c1.wait(m)
+#    c.wait(m)
 #    puts 'b'
 #  }
 #}
@@ -112,7 +112,7 @@ puts "total for b: #{b.total}"
 #t2 = Thread.new {
 #  m.synchronize {
 #    puts 'x'
-#    c1.signal
+#    c.signal
 #    puts 'y'
 #  }
 #}
