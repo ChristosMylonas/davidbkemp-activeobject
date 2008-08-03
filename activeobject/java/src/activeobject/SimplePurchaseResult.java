@@ -24,7 +24,6 @@ public class SimplePurchaseResult implements PurchaseResult
 		return message;
 	}
 	
-	@Override
 	public String toString() {
 		return fullDomainName + ": " + success; 
 	}

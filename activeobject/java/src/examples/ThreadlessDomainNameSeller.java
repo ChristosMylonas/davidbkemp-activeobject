@@ -4,7 +4,6 @@ import activeobject.DomainNameRegistry;
 import activeobject.PurchaseResult;
 
 public class ThreadlessDomainNameSeller {
-
 	private DomainNameRegistry com = new DomainNameRegistry("com");
 	private DomainNameRegistry comAu = new DomainNameRegistry("com.au");
 	private DomainNameRegistry coNz = new DomainNameRegistry("co.nz");
