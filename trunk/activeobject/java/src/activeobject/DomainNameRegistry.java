@@ -14,6 +14,7 @@ public class DomainNameRegistry {
 	
 	public PurchaseResult buyDomainName(String domainName)
 	{
+		// Pretend remote call takes 2 seconds.
 		sleep(2);
 		if (registry.contains(domainName)) {
 			return new SimplePurchaseResult(fullDomainName(domainName), false, "Not Available");

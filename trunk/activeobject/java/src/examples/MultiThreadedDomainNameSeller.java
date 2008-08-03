@@ -29,7 +29,7 @@ public class MultiThreadedDomainNameSeller {
 		t1.start();
 		Thread t2 = new Thread() {
 			public void run() {
-				domainNameSeller.byAccrossAllDomainSpaces("foo");
+				domainNameSeller.byAccrossAllDomainSpaces("baa");
 			}
 		};
 		t2.start();
